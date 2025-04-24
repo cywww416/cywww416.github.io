@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #aecdf4;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+       .fixed-text {
+            background-color: rgba(69, 124, 213, 0.719);
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: white;
+            margin-left: 1rem;
+            flex: auto;
+        }
+
+       .nav-item {
+            background-color: #ffffff;
+            color: #1969e1;
+            font-size: 1.125rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            margin-left: 1rem;
+        }
+
+       .nav-item:hover {
+            color: #7851e4;
+            border-color: #7928d6;
+            transform: scale(1.05);
+        }
+
+        section {
+            display: none;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        section:target {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+       .line1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+       .line1 .container {
+            width: 48%;
+        }
+
+       .line2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+       .line2 .container {
+            width: 48%;
+        }
+
+       .section-subtitle {
+            border: 1px solid #aecdf4;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+            background-color: #f0f4f8;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+           .fixed-text {
+                font-size: 1rem;
+            }
+
+           .nav-item {
+                font-size: 1rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+           .line1,
+           .line2 {
+                flex-direction: column;
+            }
+
+           .line1 .container,
+           .line2 .container {
+                width: 100%;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+           .nav-item {
+                margin-top: 0.5rem;
+                margin-left: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- 导航 -->
+    <nav class="flex justify-between items-center p-6">
+        <img src="刘浩然.jpg" alt="" width="50px">
+        <div class="fixed-text">你好，这是刘浩然！（曹伊雯出品，必属精品）</div>
+        <div class="flex space-x-4">
+            <a href="#section1" class="nav-item">个人信息</a>
+            <a href="#section2" class="nav-item">实习经历</a>
+            <a href="#section3" class="nav-item">校园经历</a>
+        </div>
+    </nav>
+    <!-- 内容部分 -->
+    <section id="section1">
+        <div class="line1">
+            <div class="container mx-auto p-6">
+                <h2 class="section-subtitle">基本资料</h2>
+                <p class="table1">
+                    <table>
+                        <tr><td>学历：本科在读</td></tr>
+                        <tr><td>专业：财务管理</td></tr>
+                        <tr><td>院校：华东理工大学（211）</td></tr>
+                        <tr><td>出生日期：2005.02</td></tr>
+                        <tr><td>政治面貌：共青团员</td></tr>
+                    </table>
+                </p>
+            </div>
+
+            <div class="container mx-auto p-6">
+                <h2 class="section-subtitle">主修成绩</h2>
+                <p class="table2">
+                    <table>
+                        <tr><td>综合成绩：87.56/100</td></tr>
+                        <tr><td>绩点：3.6/4.0</td></tr>
+                        <tr><td>主修课程：线性代数（94）、管理学原理（93）、财务管理概论（93）、财务管理（92)、人力资源管理（92）、C语言程序设计(90)、中级财务会计（89）、创新创业实战（90）</td></tr>
+                    </table>
+                </p>
+            </div>
+        </div>
+
+        <div class="line2">
+            <div class="container mx-auto p-6">
+                <h2 class="section-subtitle">所获嘉奖</h2>
+                <p class="text-gray-700">
+                    - 学业奖学金二等奖（2024 学年）<br>
+                    - 校园创业竞赛三等奖（2025 年）
+                </p>
+            </div>
+
+            <div class="container mx-auto p-6">
+                <h2 class="section-subtitle">相关能力</h2>
+                <p class="text-gray-700">
+                    - 专业技能：熟练掌握财务管理相关软件和工具，如 Excel、SPSS 等。<br>
+                    - 语言能力：具备良好的英语听说读写能力，通过英语四级考试。<br>
+                    - 沟通能力：在实习和校园活动中锻炼了良好的沟通协调能力，能够与不同人群有效交流。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2">
+        <h2 class="text-2xl font-bold mb-2">实习经历</h2>
+        <div class="content-block">
+            <h3 class="text-xl font-bold mb-1">2024.07 - 2024.09 安永会计师事务所 - 信息管理咨询岗</h3>
+            <p class="text-gray-700">
+                - 深入研究ISO20000及ITIL认证标准，编制映射表，提升部门业务对接效率。<br>
+                - 设计并实施信息管理系统标准化命名体系，提升文件检索效率。<br>
+                - 梳理价值流环节，构建20余份接口文档，制作演示PPT，撰写10余份操作指南和管理制度文件，提高管理效率。<br>
+                - 会议后迅速整理访谈纪要，精准捕捉关键信息并总结汇报。<br>
+                - 搜集整理国内外先进信息管理制度资料，完成关键文件中英文翻译。<br>
+                - 独立制作数据人才选拔咨询PPT，撰写选拔标准与流程。<br>
+                - 深入研究风险数据集市，整理完善相关文档并构建咨询介绍PPT，助力项目推广。
+            </p>
+        </div>
+<br>
+        <div class="content-block">
+            <h3 class="text-xl font-bold mb-1">2025.04 - 至今 德勤风驭智能科技(上海)有限公司 - iBond智慧债券</h3>
+            <p class="text-gray-700">
+                - 每日完成CRM平台Wind+同花顺双数据源同步，响应客户动态需求，完成敞口参数调整与主体信息增补。<br>
+                - 主导144国三大评级数据清洗工作，整合爬虫+网页异构数据源，补全国别简介字段200+项。<br>
+                - 设计三级校验机制：老数据查重清洗—新旧版本合并—多源时间轴比对。<br>
+                - 解析年报与预警通双源信息，独立完成徽商、浙商、天津银行子表和补录工作以及18家银行的数据全量核查，输出《补录问题答疑手册》，推动团队效率提升。
+            </p>
+        </div>
+    </section>
+
+    <section id="section3">
+        <h2 class="text-2xl font-bold mb-2">校园经历</h2>
+        <div class="content-block">
+            <h3 class="text-xl font-bold mb-1">2023.09 - 至今 华东理工大学校学生会办公室 - 主负责人</h3>
+            <p class="text-gray-700">
+                - 参与校会各部门例会，撰写纪要并反馈，统计部门和个人绩效，组织协调内部工作，部门与个人绩效考评位列第一。<br>
+                - 组织春秋季招新、全员大会、校院联席等大型活动，完成财务报销3w+，完成赞助对接20余次，活动参与人数累计达5000+人。<br>
+                - 优化校会内部管理制度，改进钉钉OA系统搭建，缩短工作周期，提高信息传达效率，提升工作活跃度。
+            </p>
+        </div>
+<br>
+        <div class="content-block">
+            <h3 class="text-xl font-bold mb-1">2023.09 - 2024.6 商学院组织、学创、主持部 - 干事</h3>
+            <p class="text-gray-700">
+                - 处理青年大学习统计数据，制作推送，对接团支部工作，数据处理量达2000+，推送阅读量1000+次，对接次数达20+次。<br>
+                - 主持各类大型活动，如四十周年院庆、大四毕业晚会等，累计参与到场人数2500+人。
+            </p>
+        </div>
+<br>
+        <div class="content-block">
+            <h3 class="text-xl font-bold mb-1">2024.06 - 至今 商学院学委会 - 主任</h3>
+            <p class="text-gray-700">
+                - 监督各部门工作及活动，提出建议，对接校院工作，举办学代会并进行换届选举。
+            </p>
+        </div>
+<br>
+        <div class="content-block">
+            <h3 class="text-xl font-bold mb-1">2023.09 - 至今 工商类2304班、财务230班 - 班长</h3>
+            <p class="text-gray-700">
+                - 搭建班级班委架构，统筹组织活动，统计数据，整理学生档案，组织评奖评优会议，会议次数达10余次，数据处理量达500+，带领班级荣获优良学风班级称号。<br>
+                - 按时高效完成年级工作对接，进行数据反馈与建议收集，在年级层面分享工作经验，获老师同学一致好评。
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
+    
